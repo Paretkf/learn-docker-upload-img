@@ -1,0 +1,13 @@
+# docker-compose version 2
+version: '2'
+
+services: 
+  webserver:
+    # build docker img ใน docker file
+    build: .
+    # -v /home/fluk/Documents/learn-docker-mounted/uploads:/app/uploads
+    volumes: 
+      - /home/fluk/Documents/learn-docker-mounted/uploads:/app/uploads
+    # -p 80:3333
+    ports: 
+      - 80:3333
